@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: #273c75;
+            color: white;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 100px 0px 0px 0px;
+        }
+
+        p{
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin: 20px 0px 25px;
+        }
+
+        button{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 10px 25px;
+            border: none;
+            background-color: white;
+            margin: 5px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Counter</h1>
+        <p id="num">0</p>
+        <button id="increase">+</button>
+        <button id="reset">reset</button>
+        <button id="decrease">-</button>
+    </div>
+    <script>
+        
+        document.getElementById("increase").addEventListener("click", function(){
+            count++;
+            document.getElementById("num").innerHTML = count;
+        })
+       
+        document.getElementById("decrease").addEventListener("click", function(){
+            count--;
+            document.getElementById("num").innerHTML = count;
+        })
+        document.getElementById("reset").addEventListener("click", function(){
+            count = 0; 
+            document.getElementById("num").innerHTML = count;
+        })
+         
+         
+    </script>
+</body>
+</html>
